@@ -1,0 +1,5066 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: #fff;
+    background: #09001d;
+    overflow: hidden;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    color: black;
+    border: 1px solid #888;
+    width: 80%;
+    height: 500px;
+    overflow: auto;
+
+  }
+ 
+  p.answer {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 40px;
+    margin-right: 40px;
+    background-color: #f9f9f9;
+}
+/* p.answer strong:nth-last-child(1) {
+    font-weight: bold;
+    color: #00a63d;
+}
+p.answer strong:nth-child(3) {
+    font-weight: bold;
+    color: red;
+} */
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    font-size: 28px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 10px;
+  }
+  .closee {
+    color: #aaaaaa;
+    font-size: 28px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 10px;
+  }
+  .closep {
+    color: #aaaaaa;
+    font-size: 28px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 10px;
+  }
+  .closepr {
+    color: #aaaaaa;
+    font-size: 28px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 10px;
+  }
+  .closei {
+    color: #aaaaaa;
+    font-size: 28px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 10px;
+  }
+  .closetf {
+    color: #aaaaaa;
+    font-size: 28px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 10px;
+  }
+  .closeu {
+    color: #aaaaaa;
+    font-size: 28px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 10px;
+  }
+  .next{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    right: 20px;
+  }
+  .closeuf {
+    color: #aaaaaa;
+    font-size: 28px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 10px;
+  }
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .closeu:hover,
+  .closeu:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .closeuf:hover,
+  .closeuf:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .closee:hover,
+  .closee:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .closep:hover,
+  .closep:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .closepr:hover,
+  .closepr:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .closei:hover,
+  .closei:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .closetf:hover,
+  .closetf:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    filter: drop-shadow(0 0 5px #09001d);
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: blue;
+}
+
+.main {
+    min-height: 100vh;
+    background: url('3087885.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    pointer-events: auto;
+    transition: .3s ease;
+}
+
+.main.active {
+    filter: blur(15px);
+    pointer-events: none;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    width: 200%;
+}
+
+.home {
+    position: relative;
+    left: -50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content {
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home-content h1 {
+    font-size: 70px;
+    font-weight: 700;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+
+/* .home-content p {
+    font-size: 16px;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    margin-bottom: 30px;
+} */
+
+.home-content .start-btn {
+    width: 190px;
+    height: 55px;
+    background: blue;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px blue;
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.home-content .start-btn:hover {
+    background: #09001d;
+    box-shadow: none;
+}
+.home-content .start-btn1 {
+    width: 190px;
+    height: 55px;
+    background: blue;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px blue;
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.home-content .start-btn1:hover {
+    background: #09001d;
+    box-shadow: none;
+}
+
+.dropbtn {
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  border-radius: 15px;
+  width: 100%;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 6px 10px;
+  text-decoration: none;
+  display: block;
+}
+
+
+.show {display: block;}
+.beginer{
+    width: 300px;
+    border: none;
+    background-color: white;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+}
+.INTERMEDIATE-pro{
+    width: 300px;
+    border: none;
+    background-color: white;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+}
+.INTERMEDIATE{
+    width: 300px;
+    border: none;
+    background-color: white;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+}
+.UPPER-INTERMEDIATE{
+    width: 300px;
+    border: none;
+    background-color: white;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+}
+.dropdown-content a:hover {
+    color: #3be7fd;
+}
+.popup-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.9);
+    width: 500px;
+    background: #fff;
+    border-radius: 6px;
+    padding: 10px 25px;
+    opacity: 0;
+    text-align: center;
+    pointer-events: none;
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.popup-infos {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.9);
+    width: 500px;
+    background: #fff;
+    border-radius: 6px;
+    padding: 10px 25px;
+    opacity: 0;
+    text-align: center;
+    pointer-events: none;
+    transition: .3s ease;
+   
+    
+}
+
+.scroll{
+    overflow: auto;
+    width: 100%;
+    height: 350px;
+    
+}
+
+
+.popup-info.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+   
+}
+.popup-infos.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup-info h2 {
+    font-size: 50px;
+    color: blue;
+}
+.popup-infos h2 {
+    font-size: 50px;
+    color: blue;
+}
+
+
+.popup-info .info {
+    display: inline-block;
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+    margin: 4px 0;
+    
+}
+.popup-infos .infos {
+    text-align: left;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    margin: 4px 0;
+
+   
+}
+
+
+.popup-info .btn-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #999;
+    margin-top: 10px;
+    padding: 15px 0 7px;
+}
+.popup-infos .btn-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #999;
+    margin-top: 10px;
+    padding: 15px 0 7px;
+}
+
+.popup-info .btn-group .info-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 45px;
+    background: blue;
+    border: 2px solid blue;
+    outline: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    transition: .5s;
+}
+.popup-infos .btn-group .info-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 45px;
+    background: blue;
+    border: 2px solid blue;
+    outline: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    transition: .5s;
+}
+
+
+.popup-info .btn-group .info-btn:nth-child(1) {
+    background: transparent;
+    color: blue;
+}
+.popup-infos .btn-group .info-btn:nth-child(1) {
+    background: transparent;
+    color: blue;
+}
+
+.popup-info .btn-group .info-btn:nth-child(1):hover {
+    background: blue;
+    color: #fff;
+}
+.popup-infos .btn-group .info-btn:nth-child(1):hover {
+    background: blue;
+    color: #fff;
+}
+
+
+.popup-info .btn-group .info-btn:nth-child(2):hover {
+    background: blue;
+    border-color: blue;
+}
+.popup-infos .btn-group .info-btn:nth-child(2):hover {
+    background: blue;
+    border-color: blue;
+}
+
+.quiz-section {
+    position: relative;
+    left: -50%;
+    width: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectionfinal {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectionpre {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectionint {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectionstr {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectionstf {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectionup {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectional {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+/* speaking */
+.quiz-sections {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectiont {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectionth {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectionf {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+
+.quiz-sectionfv {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectionc {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectione {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectionn {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectionte {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectiontel {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectiontv {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectionts {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectiontf {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectiontm {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectiontk {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectionto {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectiontw {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectiontr {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectiontp {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectiontpo {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectiontd {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectiontdt {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectionti {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectiontj {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectiontjr {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectiontb {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectiontbl {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectiontg {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectiontu {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectiontq {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectiontx {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectiontz {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectionty {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectionta {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectiontl {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectiontlt {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectiontjs {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectiontin {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectiontio {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectiontip {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectiontis {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-sectiontix {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz-section.active {
+    left: 0;
+}
+.quiz-sectionfinal.active {
+    left: 0;
+}
+.quiz-sectionpre.active {
+    left: 0;
+}
+.quiz-sectionint.active {
+    left: 0;
+}
+.quiz-sectionstr.active {
+    left: 0;
+}
+.quiz-sectionstf.active {
+    left: 0;
+}
+.quiz-sectionup.active {
+    left: 0;
+}
+.quiz-sectional.active {
+    left: 0;
+}
+
+
+
+
+/* speaking */
+.quiz-sections.active {
+    left: 0;
+}
+
+.quiz-sectiont.active {
+    left: 0;
+}
+.quiz-sectionth.active {
+    left: 0;
+}
+.quiz-sectionf.active {
+    left: 0;
+}
+.quiz-sectionfv.active {
+    left: 0;
+}
+.quiz-sectionc.active {
+    left: 0;
+}
+.quiz-sectione.active {
+    left: 0;
+}
+.quiz-sectionn.active {
+    left: 0;
+}
+.quiz-sectionte.active {
+    left: 0;
+}
+.quiz-sectiontel.active {
+    left: 0;
+}
+.quiz-sectiontv.active {
+    left: 0;
+}
+.quiz-sectionts.active {
+    left: 0;
+}
+.quiz-sectiontf.active {
+    left: 0;
+}
+.quiz-sectiontm.active {
+    left: 0;
+}
+.quiz-sectiontk.active {
+    left: 0;
+}
+.quiz-sectionto.active {
+    left: 0;
+}
+.quiz-sectiontw.active {
+    left: 0;
+}
+.quiz-sectiontr.active {
+    left: 0;
+}
+.quiz-sectiontp.active {
+    left: 0;
+}
+.quiz-sectiontpo.active {
+    left: 0;
+}
+.quiz-sectiontd.active {
+    left: 0;
+}
+.quiz-sectiontdt.active {
+    left: 0;
+}
+.quiz-sectionti.active {
+    left: 0;
+}
+.quiz-sectiontj.active {
+    left: 0;
+}
+.quiz-sectiontjr.active {
+    left: 0;
+}
+.quiz-sectiontb.active {
+    left: 0;
+}
+.quiz-sectiontbl.active {
+    left: 0;
+}
+.quiz-sectiontg.active {
+    left: 0;
+}
+.quiz-sectiontu.active {
+    left: 0;
+}
+.quiz-sectiontq.active {
+    left: 0;
+}
+.quiz-sectiontx.active {
+    left: 0;
+}
+.quiz-sectiontz.active {
+    left: 0;
+}
+.quiz-sectionty.active {
+    left: 0;
+}
+.quiz-sectionta.active {
+    left: 0;
+}
+.quiz-sectiontl.active {
+    left: 0;
+}
+.quiz-sectiontlt.active {
+    left: 0;
+}
+.quiz-sectiontjs.active {
+    left: 0;
+}
+.quiz-sectiontin.active {
+    left: 0;
+}
+.quiz-sectiontio.active {
+    left: 0;
+}
+.quiz-sectiontip.active {
+    left: 0;
+}
+.quiz-sectiontis.active {
+    left: 0;
+}
+.quiz-sectiontix.active {
+    left: 0;
+}
+.quiz-section .quiz-box {
+    position: absolute;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    height: 630px;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectionfinal .quiz-boxfil {
+    position: absolute;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    height: 630px;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectionpre .quiz-boxpre {
+    position: absolute;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    height: 630px;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectionint .quiz-boxint {
+    position: absolute;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    height: 630px;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectionstr .quiz-boxstr {
+    position: absolute;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    height: 630px;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectionstf .quiz-boxstf {
+    position: absolute;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    height: 630px;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectionup .quiz-boxup {
+    position: absolute;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    height: 630px;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectional .quiz-boxal {
+    position: absolute;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    height: 630px;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+
+
+
+
+/* speaking */
+.quiz-sections .speking-box {
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+
+.quiz-sectiont .speking-boxt {
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectionth .speking-boxth {
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectionf .speking-boxf {
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectionfv .speking-boxfv {
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectionc .speking-boxc {
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectione .speking-boxe{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectionn .speking-boxn{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectionte .speking-boxte{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectiontel .speking-boxtel{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectiontv .speking-boxtv{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectionts .speking-boxts{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectiontf .speking-boxtf{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectiontm .speking-boxtm{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectiontk .speking-boxtk{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectionto .speking-boxto{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectiontw .speking-boxtw{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectiontr .speking-boxtr{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectiontp .speking-boxtp{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectiontpo .speking-boxtpo{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectiontd .speking-boxtd{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectiontdt .speking-boxtdt{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectionti .speking-boxti{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectiontj .speking-boxtj{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectiontjr .speking-boxtjr{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectiontb .speking-boxtb{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectiontbl .speking-boxtbl{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectiontg .speking-boxtg{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectiontu .speking-boxtu{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectiontq .speking-boxtq{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectiontx .speking-boxtx{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectiontz .speking-boxtz{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectionty .speking-boxty{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectionta .speking-boxta{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectiontl .speking-boxtl{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectiontlt .speking-boxtlt{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectiontjs .speking-boxtjs{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectiontin .speking-boxtin{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectiontio .speking-boxtio{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectiontip .speking-boxtip{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectiontis .speking-boxtis{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+.quiz-sectiontix .speking-boxtix{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
+}
+
+/*  */
+.quiz-section .quiz-box.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectionfinal .quiz-boxfil.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+
+.quiz-sectionpre .quiz-boxpre.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectionint .quiz-boxint.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectionstr .quiz-boxstr.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectionstf .quiz-boxstf.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectionup .quiz-boxup.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectional .quiz-boxal.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+
+
+
+/* speakjng */
+.quiz-sections .speking-box.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+
+.quiz-sectiont .speking-boxt.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectionth .speking-boxth.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectionf .speking-boxf.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectionfv .speking-boxfv.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectionc .speking-boxc.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectione .speking-boxe.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+
+.quiz-sectionn .speking-boxn.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectionte .speking-boxte.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectiontel .speking-boxtel.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectiontv .speking-boxtv.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectionts .speking-boxts.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectiontf .speking-boxtf.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectiontm .speking-boxtm.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectiontk .speking-boxtk.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectionto .speking-boxto.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectiontw .speking-boxtw.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectiontr .speking-boxtr.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectiontp .speking-boxtp.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectiontpo .speking-boxtpo.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectiontd .speking-boxtd.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectiontdt .speking-boxtdt.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectionti .speking-boxti.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectiontj .speking-boxtj.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectiontjr .speking-boxtjr.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectiontb .speking-boxtb.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectiontbl .speking-boxtbl.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectiontg .speking-boxtg.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectiontu .speking-boxtu.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectiontq .speking-boxtq.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectiontx .speking-boxtx.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectiontz .speking-boxtz.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectionty .speking-boxty.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectionta .speking-boxta.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectiontl .speking-boxtl.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectiontlt .speking-boxtlt.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectiontjs .speking-boxtjs.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectiontin .speking-boxtin.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectiontio .speking-boxtio.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectiontip .speking-boxtip.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectiontis .speking-boxtis.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-sectiontix .speking-boxtix.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
+}
+.quiz-box h1 {
+    font-size: 30px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.quiz-boxfil h1 {
+    font-size: 30px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.quiz-boxpre h1 {
+    font-size: 30px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.quiz-boxint h1 {
+    font-size: 30px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.quiz-boxstr h1 {
+    font-size: 30px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.quiz-boxstf h1 {
+    font-size: 30px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.quiz-boxup h1 {
+    font-size: 30px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.quiz-boxal h1 {
+    font-size: 30px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-box h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxt h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxth h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxf h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxfv h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxc h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxe h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxn h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxte h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxtel h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxtv h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxts h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxtf h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxtm h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxtk h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxto h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxtw h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxtr h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxtp h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxtpo h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxtd h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxtdt h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxti h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxtj h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxtjr h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxtb h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxtbl h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxtg h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxtu h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxtq h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxtx h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxtz h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxty h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxta h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxtl h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxtlt h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxtjs h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxtin h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxtio h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxtip h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxtis h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.speking-boxtix h1 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, blue, transparent);
+    border-radius: 6px;
+}
+.quiz-box .quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.quiz-boxfil .quiz-headerfil {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.quiz-boxpre .quiz-headerpre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.quiz-boxint .quiz-headerint {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.quiz-boxstr .quiz-headerstr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.quiz-boxstf .quiz-headerstf {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.quiz-boxup .quiz-headerup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.quiz-boxal .quiz-headeral {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-box .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxt .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxth .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxf .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxfv .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 420px;
+    overflow: auto;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxc .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 420px;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxe .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 420px;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxn .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 420px;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxte .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 420px;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxtel .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 420px;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxtv .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 420px;
+    overflow: auto;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxts .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 420px;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxtf .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 420px;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxtm .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 420px;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxtk .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 420px;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxto .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 420px;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxtw .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 430px;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxtr .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 430px;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxtp .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 430px;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxtpo .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 430px;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxtd .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    overflow: auto;
+    height: 430px;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxtdt .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 430px;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxti .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 430px;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxtj .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 430px;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxtjr .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 430px;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxtb .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 430px;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxtbl .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 430px;
+    overflow:auto;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxtg .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 430px;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxtu .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 430px;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxtq .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 430px;
+    overflow: auto;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxtx .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 430px;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxtz .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 430px;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxty .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 430px;
+    overflow: auto;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxta .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 430px;
+    overflow: auto;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxtl .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 430px;
+    overflow: auto;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxtlt .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 430px;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxtjs .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 430px;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxtin .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 430px;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxtio .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 430px;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxtip .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 430px;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxtis .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 430px;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.speking-boxtix .quiz-header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+    height: 430px;
+    border-bottom: 2px solid blue;
+    margin-bottom: 30px;
+}
+.quiz-header span {
+    font-size: 17px;
+    font-weight: 500;
+}
+.quiz-headerfil span {
+    font-size: 17px;
+    font-weight: 500;
+}
+.quiz-headerpre span {
+    font-size: 17px;
+    font-weight: 500;
+}
+.quiz-headerint span {
+    font-size: 17px;
+    font-weight: 500;
+}
+.quiz-headerstr span {
+    font-size: 17px;
+    font-weight: 500;
+}
+.quiz-headerstf span {
+    font-size: 17px;
+    font-weight: 500;
+}
+.quiz-headerup span {
+    font-size: 17px;
+    font-weight: 500;
+}
+.quiz-headeral span {
+    font-size: 17px;
+    font-weight: 500;
+}
+.quiz-header .header-score {
+    background: blue;
+    border-radius: 3px;
+    padding: 7px;
+}
+.quiz-headerfil .header-scores {
+    background: blue;
+    border-radius: 3px;
+    padding: 7px;
+}
+/* .quiz-headerpre .header-scorep {
+    background: blue;
+    border-radius: 3px;
+    padding: 7px;
+} */
+.quiz-headerint .header-scorei {
+    background: blue;
+    border-radius: 3px;
+    padding: 7px;
+}
+.quiz-headerstr .header-scorer {
+    background: blue;
+    border-radius: 3px;
+    padding: 7px;
+}
+.quiz-headerstf .header-scoref {
+    background: blue;
+    border-radius: 3px;
+    padding: 7px;
+}
+.quiz-headerup .header-scoreu {
+    background: blue;
+    border-radius: 3px;
+    padding: 7px;
+}
+.quiz-headeral .header-scoreal {
+    background: blue;
+    border-radius: 3px;
+    padding: 7px;
+}
+.quiz-box .question-text {
+    font-size: 17px;
+    font-weight: 500;
+    height: 90px;
+}
+.quiz-boxfil .question-texta {
+    font-size: 17px;
+    font-weight: 500;
+    height: 90px;
+}
+.quiz-boxpre .question-textp {
+    font-size: 17px;
+    font-weight: 500;
+    height: 90px;
+}
+.quiz-boxint .question-texti {
+    font-size: 17px;
+    font-weight: 500;
+    height: 90px;
+}
+.quiz-boxstr .question-textr {
+    font-size: 17px;
+    font-weight: 500;
+    height: 90px;
+}
+.quiz-boxstf .question-textf {
+    font-size: 17px;
+    font-weight: 500;
+    height: 90px;
+}
+.quiz-boxup .question-textu {
+    font-size: 17px;
+    font-weight: 500;
+    height: 90px;
+}
+.quiz-boxal .question-textal {
+    font-size: 17px;
+    font-weight: 500;
+    height: 90px;
+}
+
+.option-list .option {
+    width: 100%;
+    padding: 11px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 4px;
+    font-size: 15px;
+    margin: 12px 0;
+    height: 50px;
+    cursor: pointer;
+    transition: .3s;
+}
+.option-lista .optiona {
+    width: 100%;
+    padding: 11px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 4px;
+    font-size: 15px;
+    margin: 12px 0;
+    height: 50px;
+    cursor: pointer;
+    transition: .3s;
+}
+.option-listp .optionp {
+    width: 100%;
+    padding: 11px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 4px;
+    font-size: 15px;
+    margin: 12px 0;
+    height: 50px;
+    cursor: pointer;
+    transition: .3s;
+}
+.option-listi .optioni {
+    width: 100%;
+    padding: 11px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 4px;
+    font-size: 15px;
+    margin: 12px 0;
+    height: 50px;
+    cursor: pointer;
+    transition: .3s;
+}
+.option-listr .optionr {
+    width: 100%;
+    padding: 11px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 4px;
+    font-size: 15px;
+    margin: 12px 0;
+    height: 50px;
+    cursor: pointer;
+    transition: .3s;
+}
+.option-listf .optionf {
+    width: 100%;
+    padding: 11px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 4px;
+    font-size: 15px;
+    margin: 12px 0;
+    height: 50px;
+    cursor: pointer;
+    transition: .3s;
+}
+.option-listu .optionu {
+    width: 100%;
+    padding: 11px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 4px;
+    font-size: 15px;
+    margin: 12px 0;
+    height: 50px;
+    cursor: pointer;
+    transition: .3s;
+}
+.option-listal .optional {
+    width: 100%;
+    padding: 11px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 4px;
+    font-size: 15px;
+    margin: 12px 0;
+    height: 50px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.option-list .option:hover {
+    background: rgba(255, 255, 255, .1);
+    border-color: rgba(255, 255, 255, .1);
+}
+.option-lista .optiona:hover {
+    background: rgba(255, 255, 255, .1);
+    border-color: rgba(255, 255, 255, .1);
+}
+.option-listp .optionp:hover {
+    background: rgba(255, 255, 255, .1);
+    border-color: rgba(255, 255, 255, .1);
+}
+.option-listi .optioni:hover {
+    background: rgba(255, 255, 255, .1);
+    border-color: rgba(255, 255, 255, .1);
+}
+.option-listr .optionr:hover {
+    background: rgba(255, 255, 255, .1);
+    border-color: rgba(255, 255, 255, .1);
+}
+.option-listf .optionf:hover {
+    background: rgba(255, 255, 255, .1);
+    border-color: rgba(255, 255, 255, .1);
+}
+.option-listu .optionu:hover {
+    background: rgba(255, 255, 255, .1);
+    border-color: rgba(255, 255, 255, .1);
+}
+.option-listal .optional:hover {
+    background: rgba(255, 255, 255, .1);
+    border-color: rgba(255, 255, 255, .1);
+}
+
+.option-list .option.correct {
+    background: #09001d;
+    color: #00a63d;
+    border-color: #00a63d;
+}
+.option-lista .optiona.correct {
+    background: #09001d;
+    color: #00a63d;
+    border-color: #00a63d;
+}
+.option-listp .optionp.correct {
+    background: #09001d;
+    color: #00a63d;
+    border-color: #00a63d;
+}
+.option-listi .optioni.correct {
+    background: #09001d;
+    color: #00a63d;
+    border-color: #00a63d;
+}
+.option-listr .optionr.correct {
+    background: #09001d;
+    color: #00a63d;
+    border-color: #00a63d;
+}
+.option-listf .optionf.correct {
+    background: #09001d;
+    color: #00a63d;
+    border-color: #00a63d;
+}
+.option-listu .optionu.correct {
+    background: #09001d;
+    color: #00a63d;
+    border-color: #00a63d;
+}
+.option-listal .optional.correct {
+    background: #09001d;
+    color: #00a63d;
+    border-color: #00a63d;
+}
+.option-list .option.incorrect {
+    background: #09001d;
+    color: #a60045;
+    border-color: #a60045;
+}
+.option-list .option:active{
+    background: #09001d;
+    color: #00a63d;
+    border-color: #00a63d;
+}
+.option-lista .optiona:active{
+    background: #09001d;
+    color: #00a63d;
+    border-color: #00a63d;
+}
+.option-listp .optionp:active{
+    background: #09001d;
+    color: #00a63d;
+    border-color: #00a63d;
+}
+.option-listi .optioni:active{
+    background: #09001d;
+    color: #00a63d;
+    border-color: #00a63d;
+}
+.option-listr .optionr:active{
+    background: #09001d;
+    color: #00a63d;
+    border-color: #00a63d;
+}
+.option-listf .optionf:active{
+    background: #09001d;
+    color: #00a63d;
+    border-color: #00a63d;
+}
+.option-listu .optionu:active{
+    background: #09001d;
+    color: #00a63d;
+    border-color: #00a63d;
+}
+.option-listal .optional:active{
+    background: #09001d;
+    color: #00a63d;
+    border-color: #00a63d;
+}
+/* .option-lista .optiona.incorrect {
+    background: #09001d;
+    color: #a60045;
+    border-color: #a60045;
+} */
+/* .option-listp .optionp.incorrect {
+    background: #09001d;
+    color: #a60045;
+    border-color: #a60045;
+} */
+/* .option-listi .optioni.incorrect {
+    background: #09001d;
+    color: #a60045;
+    border-color: #a60045;
+} */
+/* .option-listr .optionr.incorrect {
+    background: #09001d;
+    color: #a60045;
+    border-color: #a60045;
+} */
+/* .option-listf .optionf.incorrect {
+    background: #09001d;
+    color: #a60045;
+    border-color: #a60045;
+} */
+/* .option-listu .optionu.incorrect {
+    background: #09001d;
+    color: #a60045;
+    border-color: #a60045;
+} */
+/* .option-listal .optional.incorrect {
+    background: #09001d;
+    color: #a60045;
+    border-color: #a60045;
+} */
+.option-list .option.disabled {
+    pointer-events: none;
+}
+.option-lista .optiona.disabled {
+    pointer-events: none;
+}
+.option-listp .optionp.disabled {
+    pointer-events: none;
+}
+.option-listi .optioni.disabled {
+    pointer-events: none;
+}
+.option-listr .optionr.disabled {
+    pointer-events: none;
+}
+.option-listf .optionf.disabled {
+    pointer-events: none;
+}
+.option-listu .optionu.disabled {
+    pointer-events: none;
+}
+.option-listal .optional.disabled {
+    pointer-events: none;
+}
+.quiz-box .quiz-footertma {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid blue;
+    padding-top: 20px;
+    margin-top: 25px;
+}
+.quiz-boxfil .quiz-footerfil {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid blue;
+    padding-top: 20px;
+    margin-top: 25px;
+}
+.quiz-boxpre .quiz-footerpre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid blue;
+    padding-top: 20px;
+    margin-top: 25px;
+}
+.quiz-boxint .quiz-footerint {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid blue;
+    padding-top: 20px;
+    margin-top: 25px;
+}
+.quiz-boxstr .quiz-footerstr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid blue;
+    padding-top: 20px;
+    margin-top: 25px;
+}
+.quiz-boxstf .quiz-footerstf {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid blue;
+    padding-top: 20px;
+    margin-top: 25px;
+}
+.quiz-boxup .quiz-footerstu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid blue;
+    padding-top: 20px;
+    margin-top: 25px;
+}
+.quiz-boxal .quiz-footersal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid blue;
+    padding-top: 20px;
+    margin-top: 25px;
+}
+.quiz-footertma .question-total {
+    font-size: 16px;
+    font-weight: 600;
+}
+.quiz-footerfil .question-totala {
+    font-size: 16px;
+    font-weight: 600;
+}
+.quiz-footerpre .question-totalp {
+    font-size: 16px;
+    font-weight: 600;
+}
+.quiz-footerint .question-totali {
+    font-size: 16px;
+    font-weight: 600;
+}
+.quiz-footerstr .question-totalr {
+    font-size: 16px;
+    font-weight: 600;
+}
+.quiz-footerstf .question-totalf {
+    font-size: 16px;
+    font-weight: 600;
+}
+.quiz-footerstu .question-totalu {
+    font-size: 16px;
+    font-weight: 600;
+}
+.quiz-footersal .question-totalal {
+    font-size: 16px;
+    font-weight: 600;
+}
+.quiz-footertma .next-btn {
+    width: 100px;
+    height: 45px;
+    background: rgba(255, 255, 255, .1);
+    border: 2px solid rgba(255, 255, 255, .1);
+    outline: none;
+    border-radius: 6px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, .3);
+    font-weight: 600;
+    cursor: pointer;
+    pointer-events: none;
+    transition: .5s;
+}
+.quiz-footerfil .next-btnF {
+    width: 100px;
+    height: 45px;
+    background: rgba(255, 255, 255, .1);
+    border: 2px solid rgba(255, 255, 255, .1);
+    outline: none;
+    border-radius: 6px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, .3);
+    font-weight: 600;
+    cursor: pointer;
+    pointer-events: none;
+    transition: .5s;
+}
+.quiz-footerpre .next-btnP {
+    width: 100px;
+    height: 45px;
+    background: rgba(255, 255, 255, .1);
+    border: 2px solid rgba(255, 255, 255, .1);
+    outline: none;
+    border-radius: 6px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, .3);
+    font-weight: 600;
+    cursor: pointer;
+    pointer-events: none;
+    transition: .5s;
+}
+.quiz-footerint .next-btnI {
+    width: 100px;
+    height: 45px;
+    background: rgba(255, 255, 255, .1);
+    border: 2px solid rgba(255, 255, 255, .1);
+    outline: none;
+    border-radius: 6px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, .3);
+    font-weight: 600;
+    cursor: pointer;
+    pointer-events: none;
+    transition: .5s;
+}
+.quiz-footerstr .next-btnR {
+    width: 100px;
+    height: 45px;
+    background: rgba(255, 255, 255, .1);
+    border: 2px solid rgba(255, 255, 255, .1);
+    outline: none;
+    border-radius: 6px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, .3);
+    font-weight: 600;
+    cursor: pointer;
+    pointer-events: none;
+    transition: .5s;
+}
+.quiz-footerstf .next-btnQ {
+    width: 100px;
+    height: 45px;
+    background: rgba(255, 255, 255, .1);
+    border: 2px solid rgba(255, 255, 255, .1);
+    outline: none;
+    border-radius: 6px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, .3);
+    font-weight: 600;
+    cursor: pointer;
+    pointer-events: none;
+    transition: .5s;
+}
+.quiz-footerstu .next-btnU {
+    width: 100px;
+    height: 45px;
+    background: rgba(255, 255, 255, .1);
+    border: 2px solid rgba(255, 255, 255, .1);
+    outline: none;
+    border-radius: 6px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, .3);
+    font-weight: 600;
+    cursor: pointer;
+    pointer-events: none;
+    transition: .5s;
+}
+.quiz-footersal .next-btnM {
+    width: 100px;
+    height: 45px;
+    background: rgba(255, 255, 255, .1);
+    border: 2px solid rgba(255, 255, 255, .1);
+    outline: none;
+    border-radius: 6px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, .3);
+    font-weight: 600;
+    cursor: pointer;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.quiz-footer .exit-btns {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btnt {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btnth {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btnf {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btnfv {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btnc {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btnn {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btnte {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btntel {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btntv {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btnts {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btntf {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btntm {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btntk {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btnto {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btntw {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btntr {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btntp {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btntpo {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btntd {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btntdt {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btnti {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btntj {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btntjr {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btntb {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btntbl {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btntg {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btntu {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btntq {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btntx {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btntz {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btnty {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btnta {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btntl {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btntlt {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btntjs {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btntin {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btntio {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btntip {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btntis {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btntix {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footer .exit-btne {
+    width: 100px;
+    height: 45px;
+    background: blue;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 6px;
+    font-size: 18px;
+    color:white;
+    font-weight: 600;
+    transition: .5s;
+}
+.quiz-footertma .next-btn.active {
+    pointer-events: auto;
+    background: blue;
+    border-color: blue;
+    color: #fff;
+}
+.quiz-footerfil .next-btnF.active {
+    pointer-events: auto;
+    background: blue;
+    border-color: blue;
+    color: #fff;
+}
+.quiz-footerpre .next-btnP.active {
+    pointer-events: auto;
+    background: blue;
+    border-color: blue;
+    color: #fff;
+}
+.quiz-footerint .next-btnI.active {
+    pointer-events: auto;
+    background: blue;
+    border-color: blue;
+    color: #fff;
+}
+.quiz-footerstr .next-btnR.active {
+    pointer-events: auto;
+    background: blue;
+    border-color: blue;
+    color: #fff;
+}
+.quiz-footerstf .next-btnQ.active {
+    pointer-events: auto;
+    background: blue;
+    border-color: blue;
+    color: #fff;
+}
+.quiz-footerstu .next-btnU.active {
+    pointer-events: auto;
+    background: blue;
+    border-color: blue;
+    color: #fff;
+}
+.quiz-footersal .next-btnM.active {
+    pointer-events: auto;
+    background: blue;
+    border-color: blue;
+    color: #fff;
+}
+.quiz-footertma .next-btn.active:hover {
+    background: blue;
+    border-color: blue;
+}
+.quiz-footerfil .next-btnF.active:hover {
+    background: blue;
+    border-color: blue;
+}
+.quiz-footerpre .next-btnP.active:hover {
+    background: blue;
+    border-color: blue;
+}
+.quiz-footerint .next-btnI.active:hover {
+    background: blue;
+    border-color: blue;
+}
+.quiz-footerstr .next-btnR.active:hover {
+    background: blue;
+    border-color: blue;
+}
+.quiz-footerstf .next-btnQ.active:hover {
+    background: blue;
+    border-color: blue;
+}
+.quiz-footerstu .next-btnU.active:hover {
+    background: blue;
+    border-color: blue;
+}
+.quiz-footersal .next-btnM.active:hover {
+    background: blue;
+    border-color: blue;
+}
+.quiz-section .result-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.9);
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease;
+}
+
+.quiz-section .result-box.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.quiz-sectionfinal .result-boxfil {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.9);
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease;
+}
+
+.quiz-sectionfinal .result-boxfil.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+} 
+
+.quiz-sectionpre .result-boxpre {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.9);
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease;
+}
+.quiz-sectionint .result-boxint {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.9);
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease;
+}
+.quiz-sectionstr .result-boxstr {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.9);
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease;
+}
+.quiz-sectionstf .result-boxstf {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.9);
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease;
+}
+.quiz-sectionup .result-boxstu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.9);
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease;
+}
+.quiz-sectional .result-boxstal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.9);
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease;
+}
+
+
+.quiz-sectionpre .result-boxpre.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+} 
+.quiz-sectionint .result-boxint.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+} 
+.quiz-sectionstr .result-boxstr.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+} 
+.quiz-sectionstf .result-boxstf.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+} 
+.quiz-sectionup .result-boxstu.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+} 
+.quiz-sectional .result-boxstal.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+} 
+
+
+.result-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.9);
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease;
+}
+.result-boxfil {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.9);
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease;
+}
+.result-boxpre {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.9);
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease;
+}
+.result-boxint {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.9);
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease;
+}
+.result-boxstr {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.9);
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease;
+}
+.result-boxstf {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.9);
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease;
+}
+.result-boxstu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.9);
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease;
+}
+.result-boxstal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.9);
+    width: 500px;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease;
+}
+.result-box h2 {
+    font-size: 52px;
+}
+.result-boxfil h2 {
+    font-size: 52px;
+}
+.result-boxpre h2 {
+    font-size: 52px;
+}
+.result-boxint h2 {
+    font-size: 52px;
+}
+.result-boxstr h2 {
+    font-size: 52px;
+}
+.result-boxstf h2 {
+    font-size: 52px;
+}
+.result-boxstu h2 {
+    font-size: 52px;
+}
+.result-boxstal h2 {
+    font-size: 52px;
+}
+.result-box .percentage-container {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0 40px;
+}
+.result-boxfil .percentage-container {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0 40px;
+}
+.result-boxpre .percentage-container {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0 40px;
+}
+.result-boxint .percentage-container {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0 40px;
+}
+.result-boxstr .percentage-container {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0 40px;
+}
+.result-boxstf .percentage-container {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0 40px;
+}
+.result-boxstu .percentage-container {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0 40px;
+}
+.result-boxstal .percentage-container {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0 40px;
+}
+.percentage-container .circular-progress {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background: conic-gradient(blue 3.6deg, rgba(255, 255, 255, .1) 0deg);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.percentage-container .circular-progressfil {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background: conic-gradient(blue 3.6deg, rgba(255, 255, 255, .1) 0deg);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.percentage-container .circular-progresspre {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background: conic-gradient(blue 3.6deg, rgba(255, 255, 255, .1) 0deg);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.percentage-container .circular-progressint {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background: conic-gradient(blue 3.6deg, rgba(255, 255, 255, .1) 0deg);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.percentage-container .circular-progressstr {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background: conic-gradient(blue 3.6deg, rgba(255, 255, 255, .1) 0deg);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.percentage-container .circular-progressstf {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background: conic-gradient(blue 3.6deg, rgba(255, 255, 255, .1) 0deg);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.percentage-container .circular-progressu {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background: conic-gradient(blue 3.6deg, rgba(255, 255, 255, .1) 0deg);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.percentage-container .circular-progressal {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background: conic-gradient(blue 3.6deg, rgba(255, 255, 255, .1) 0deg);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.percentage-container .circular-progress::before {
+    content: '';
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    background: #09001d;
+    border-radius: 50%;
+}
+.percentage-container .circular-progressfil::before {
+    content: '';
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    background: #09001d;
+    border-radius: 50%;
+}
+.percentage-container .circular-progresspre::before {
+    content: '';
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    background: #09001d;
+    border-radius: 50%;
+}
+.percentage-container .circular-progressint::before {
+    content: '';
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    background: #09001d;
+    border-radius: 50%;
+}
+.percentage-container .circular-progressstr::before {
+    content: '';
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    background: #09001d;
+    border-radius: 50%;
+}
+.percentage-container .circular-progressstf::before {
+    content: '';
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    background: #09001d;
+    border-radius: 50%;
+}
+.percentage-container .circular-progressu::before {
+    content: '';
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    background: #09001d;
+    border-radius: 50%;
+}
+.percentage-container .circular-progressal::before {
+    content: '';
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    background: #09001d;
+    border-radius: 50%;
+}
+.circular-progress .progress-value {
+    position: relative;
+    font-size: 45px;
+    font-weight: 600;
+}
+.circular-progressfil .progress-values {
+    position: relative;
+    font-size: 45px;
+    font-weight: 600;
+}
+.circular-progresspre .progress-valuep {
+    position: relative;
+    font-size: 45px;
+    font-weight: 600;
+}
+.circular-progressint .progress-valuei {
+    position: relative;
+    font-size: 45px;
+    font-weight: 600;
+}
+.circular-progressstr .progress-valuer {
+    position: relative;
+    font-size: 45px;
+    font-weight: 600;
+}
+.circular-progressstf .progress-valuef {
+    position: relative;
+    font-size: 45px;
+    font-weight: 600;
+}
+.circular-progressu .progress-valueu {
+    position: relative;
+    font-size: 45px;
+    font-weight: 600;
+}
+.circular-progressal .progress-valueal {
+    position: relative;
+    font-size: 45px;
+    font-weight: 600;
+}
+.percentage-container .score-text {
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+.percentage-container .score-textfil {
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+.percentage-container .score-textint {
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+.percentage-container .score-textstr {
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+.percentage-container .score-textstf {
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+.percentage-container .score-textstu {
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+.percentage-container .score-textstal {
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+.percentage-container .score-textpre {
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+.result-box .buttons {
+    display: flex;
+}
+.result-boxfil .buttons {
+    display: flex;
+}
+.result-boxpre .buttons {
+    display: flex;
+}
+.result-boxint .buttons {
+    display: flex;
+}
+.result-boxstr .buttons {
+    display: flex;
+}
+.result-boxstf .buttons {
+    display: flex;
+}
+.result-boxstu .buttons {
+    display: flex;
+}
+.result-boxstal .buttons {
+    display: flex;
+}
+.buttons button {
+    width: 130px;
+    height: 47px;
+    background: blue;
+    border: 2px solid blue;
+    outline: none;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    margin: 0 20px 20px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.buttons button:nth-child(1):hover {
+    background: blue;
+    border-color: blue;
+}
+
+.buttons button:nth-child(2) {
+    background: transparent;
+    color: blue;
+}
+
+.buttons button:nth-child(2):hover {
+    background: blue;
+    color: #fff;
+}
