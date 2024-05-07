@@ -7,7 +7,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-@media only screen and (max-width: 1800px) {
+@media only screen and (min-width: 1800px) {
     /* Bu kerakli stil - 600 pikseldan kichik ekranlarda ishlaydi */
     .home-content{
         max-width: 1000px !important;
