@@ -293,7 +293,7 @@ let elementryf = [
         question: "I’ve got toothache. I _____ go to the dentist.", 
         answer:   "B. must  ",
         optionsd: [
-            "A. I’ve got toothache. I _____ go to the dentist. ",
+            "A. have got ",
             "B. must  ",
             "C. couldn’t ",
             "D. couldn’t "
@@ -301,7 +301,7 @@ let elementryf = [
     },
     {
         numb: 3,
-        question: "Turn the T.V off. No one _____ it!",
+        question: "Turn the TV off. No one _____ it!",
         answer:   "C. is watching  ",
         optionsd: [
             "A. watches  ",
@@ -346,7 +346,7 @@ let elementryf = [
     {
         numb: 7,
         question: "A: _____ you like _____ biscuit?  B: Yes, please. And I _____ some milk, too.",
-        answer: "B. Do / a / would like ",
+        answer: "A. Would / a / ’d like ",
         optionsd: [
             "A. Would / a / ’d like ",
             "B. Do / a / would like ",
@@ -412,7 +412,7 @@ let elementryf = [
     {
         numb: 13,
         question: "German is _____ English in some ways, but it is more difficult _____  English. ",
-        answer: "A. like / then  ",
+        answer: "C. like / than  ",
         optionsd: [
             "A. like / then  ",
             "B. as / that  ",
@@ -679,23 +679,23 @@ let preinter = [
     {
         numb: 12,
         question: " We’ve known Paul _____ two years. Have you _____ met him?",
-        answer: "C. since / ever   ",
+        answer: "C. for / ever  ",
         optionsp: [
             "A. since / for   ",
             "B. since / ever   ",
-            "C. since / ever   ",
+            "C. for / ever  ",
             "D. never / ever "
         ]
     },
     {
         numb: 13,
         question: "If you want to learn English, you _____ speak your language in English    lessons.         ",
-        answer: "D. lshouldn’t",
+        answer: "D. shouldn’t",
         optionsp: [
             "A. should   ",
             "B. don’t have to  ",
             "C. must   ",
-            "D. lshouldn’t"
+            "D. shouldn’t"
         ]
     },
     {
@@ -755,13 +755,13 @@ let preinter = [
     },
     {
         numb: 19,
-        question: "-I ___ understand the rule; ___ I take the examination another time?   -Yes, of course.",
+        question: "-I ___ understand the rule;   ___ I take the examination another time?   -Yes, of course.",
         answer: "C. can’t / may",
         optionsp: [
             "A. could / can",
             "B. may / may ",
             "C. can’t / may",
-            "D. mustn’t "
+            "D. mustn’t / must  "
         ]
     },
     {
@@ -857,10 +857,10 @@ let preinterfil = [
     {
         numb: 3,
         question: "You can tell me your secret. I _____ anyone.",
-        answer:   "B. am not going tell ",
+        answer:   "B. won’t tell",
         optionpf: [
             "A. am not going tell   ",
-            "B. am not going tell ",
+            "B. won’t tell",
             "C. don’t tell    ",
             "D. didn’t tell"
         ]
@@ -1088,10 +1088,10 @@ let preinterfil = [
     {
         numb: 24,
         question: "“What are you doing tonight?”  “I don’t know. I _____ out, or I _____ at home.”",
-        answer: "B. will go / am staying    ",
+        answer: "B. might go / might stay",
         optionpf: [
             "A. will go / am staying    ",
-            "B. will go / am staying    ",
+            "B. might go / might stay",
             "C. am going / am staying    ",
             "D. go / stay"
         ]

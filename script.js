@@ -801,7 +801,7 @@ function showAnswers() {
     for (let i = 0; i < allAnswers.length; i++) {
         answersHTML += `
             <p class="answer">
-                <strong>Question:</strong> ${allAnswers[i].questions}<br>
+                <strong>${i + 1}.Question:</strong> ${allAnswers[i].questions}<br>
                 <strong>Your Answer:</strong> ${allAnswers[i].yourAnswer}<br>
                 <strong>Correct Answer:</strong> ${allAnswers[i].correctAnswer}
             </p>
@@ -830,7 +830,7 @@ function showAnswersE() {
     for (let i = 0; i < ellAnswers.length; i++) {
         answersHTML += `
             <p class="answer">
-                <strong>Question:</strong> ${ellAnswers[i].elementryf}<br>
+                <strong>${i + 1}.Question:</strong> ${ellAnswers[i].elementryf}<br>
                 <strong>Your Answer:</strong> ${ellAnswers[i].yourAnswer}<br>
                 <strong>Correct Answer:</strong> ${ellAnswers[i].correctAnswere}
             </p>
@@ -859,7 +859,7 @@ function showAnswersP() {
     for (let i = 0; i < pllAnswers.length; i++) {
         answersHTML += `
             <p class="answer">
-                <strong>Question:</strong> ${pllAnswers[i].preinter}<br>
+                <strong>${i + 1}.Question:</strong> ${pllAnswers[i].preinter}<br>
                 <strong>Your Answer:</strong> ${pllAnswers[i].yourAnswer}<br>
                 <strong>Correct Answer:</strong> ${pllAnswers[i].correctAnswerp}
             </p>
@@ -888,7 +888,7 @@ function showAnswersI() {
     for (let i = 0; i <prllAnswers.length; i++) {
         answersHTML += `
             <p class="answer">
-                <strong>Question:</strong> ${prllAnswers[i].preinterfil}<br>
+                <strong>${i + 1}.Question:</strong> ${prllAnswers[i].preinterfil}<br>
                 <strong>Your Answer:</strong> ${prllAnswers[i].yourAnswer}<br>
                 <strong>Correct Answer:</strong> ${prllAnswers[i].correctAnswerpr}
             </p>
@@ -917,7 +917,7 @@ function showAnswersIs() {
     for (let i = 0; i <illAnswers.length; i++) {
         answersHTML += `
             <p class="answer">
-                <strong>Question:</strong> ${illAnswers[i].preinterstr}<br>
+                <strong>${i + 1}.Question:</strong> ${illAnswers[i].preinterstr}<br>
                 <strong>Your Answer:</strong> ${illAnswers[i].yourAnswer}<br>
                 <strong>Correct Answer:</strong> ${illAnswers[i].correctAnsweri}
             </p>
@@ -945,7 +945,7 @@ function showAnswerstf() {
     for (let i = 0; i <inllAnswers.length; i++) {
         answersHTML += `
             <p class="answer">
-                <strong>Question:</strong> ${inllAnswers[i].preinterstf}<br>
+                <strong>${i + 1}.Question:</strong> ${inllAnswers[i].preinterstf}<br>
                 <strong>Your Answer:</strong> ${inllAnswers[i].yourAnswer}<br>
                 <strong>Correct Answer:</strong> ${inllAnswers[i].correctAnswerin}
             </p>
@@ -975,7 +975,7 @@ function showAnswersU() {
     for (let i = 0; i <ullAnswers.length; i++) {
         answersHTML += `
             <p class="answer">
-                <strong>Question:</strong> ${ullAnswers[i].preinteru}<br>
+                <strong>${i + 1}.Question:</strong> ${ullAnswers[i].preinteru}<br>
                 <strong>Your Answer:</strong> ${ullAnswers[i].yourAnswer}<br>
                 <strong>Correct Answer:</strong> ${ullAnswers[i].correctAnsweru}
             </p>
@@ -1004,7 +1004,7 @@ function showAnswersUf() {
     for (let i = 0; i <upllAnswers.length; i++) {
         answersHTML += `
             <p class="answer">
-                <strong>Question:</strong> ${upllAnswers[i].preintergh}<br>
+                <strong>${i + 1}.Question:</strong> ${upllAnswers[i].preintergh}<br>
                 <strong>Your Answer:</strong> ${upllAnswers[i].yourAnswer}<br>
                 <strong>Correct Answer:</strong> ${upllAnswers[i].correctAnswerup}
             </p>
@@ -1754,20 +1754,23 @@ function showQuestions(index) {
 }
 const allAnswers = [];
 
+
 function optionSelected(answer) {
     let userAnswer = answer.textContent;
     let correctAnswer = questions[questionCount].answer;
+
+    // Foydalanuvchi o'z javobini qo'shadi
+    allAnswers.push({
+        questions: questions[questionCount].question,
+        yourAnswer: userAnswer,
+        correctAnswer: correctAnswer
+    });
+
     let allOptions = optionList.children.length;
 
     if (userAnswer == correctAnswer) {
         userScore += 1;
     }
-
-    allAnswers.push({ // Har bir javobni allAnswers massiviga qo'shamiz
-        questions: questions[questionCount].question,
-        yourAnswer: userAnswer,
-        correctAnswer: correctAnswer
-    });
 
     // Barcha variantlarni o'chiramiz
     for (let i = 0; i < allOptions; i++) {
@@ -1776,6 +1779,7 @@ function optionSelected(answer) {
 
     nextBtn.classList.add('active');
 }
+
 
 
 function questionCounter(index) {
@@ -1799,6 +1803,7 @@ function showResultBox() {
     const progressValue = document.querySelector('.progress-value');
     let progressStartValue = -1;
     let progressEndValue = (userScore / questions.length) * 100;
+    progressEndValue = Math.round(progressEndValue);
     let speed = 20;
 
     let progress = setInterval(() => {
@@ -1881,6 +1886,7 @@ function showResultBoxfil() {
     const progressValues = document.querySelector('.progress-values');
     let progressStartValue = -1;
     let progressEndValue = (userScore / elementryf.length) * 100;
+    progressEndValue = Math.round(progressEndValue);
     let speed = 20;
 
     let progress = setInterval(() => {
@@ -1962,6 +1968,7 @@ function showResultBoxPre() {
     const progressValuep = document.querySelector('.progress-valuep');
     let progressStartValue = -1;
     let progressEndValue = (userScore / preinter.length) * 100;
+    progressEndValue = Math.round(progressEndValue);
     let speed = 20;
 
     let progress = setInterval(() => {
@@ -2041,6 +2048,7 @@ function showResultBoxInt() {
     const progressValuei = document.querySelector('.progress-valuei');
     let progressStartValue = -1;
     let progressEndValue = (userScore / preinterfil.length) * 100;
+    progressEndValue = Math.round(progressEndValue);
     let speed = 20;
 
     let progress = setInterval(() => {
@@ -2120,6 +2128,7 @@ function showResultBoxStr() {
     const progressValuer = document.querySelector('.progress-valuer');
     let progressStartValue = -1;
     let progressEndValue = (userScore / preinterstr.length) * 100;
+    progressEndValue = Math.round(progressEndValue);
     let speed = 20;
 
     let progress = setInterval(() => {
@@ -2200,6 +2209,7 @@ function showResultBoxStf() {
     const progressValuef = document.querySelector('.progress-valuef');
     let progressStartValue = -1;
     let progressEndValue = (userScore / preinterstf.length) * 100;
+    progressEndValue = Math.round(progressEndValue);
     let speed = 20;
 
     let progress = setInterval(() => {
@@ -2279,6 +2289,7 @@ function showResultBoxU() {
     const progressValueu = document.querySelector('.progress-valueu');
     let progressStartValue = -1;
     let progressEndValue = (userScore / preinteru.length) * 100;
+    progressEndValue = Math.round(progressEndValue);
     let speed = 20;
 
     let progress = setInterval(() => {
@@ -2358,6 +2369,8 @@ function showResultBoxAl() {
     const progressValueal = document.querySelector('.progress-valueal');
     let progressStartValue = -1;
     let progressEndValue = (userScore / preintergh.length) * 100;
+    progressEndValue = Math.round(progressEndValue);
+
     let speed = 20;
 
     let progress = setInterval(() => {
