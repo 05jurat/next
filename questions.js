@@ -1130,7 +1130,7 @@ let preinterstr = [
         optionk: [
             "A. While ",
             "B. During  ",
-            "C. For    ",
+            "C. For",
             "D. In "
         ]
     },
