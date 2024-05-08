@@ -5235,12 +5235,12 @@ p.answer strong:nth-child(3) {
 }
 .buttons button {
     width: 130px;
-    height: 47px;
+    height: 57px;
     background: blue;
     border: 2px solid blue;
     outline: none;
     border-radius: 6px;
-    font-size: 16px;
+    font-size: 15px;
     color: #fff;
     font-weight: 600;
     margin: 0 20px 20px;

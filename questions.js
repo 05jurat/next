@@ -1191,7 +1191,7 @@ let preinterstr = [
     },
     {
         numb: 8,
-        question: "If you _____ any problems, let me know and I _____ and help you6 straight away",
+        question: "If you _____ any problems, let me know and I _____ and help you straight away.",
         answer:  "B. have / will come   ",
         optionk: [
             "A. had / would come   ",
@@ -1614,7 +1614,7 @@ let preinterstf = [
     },
     {
         numb: 21,
-        question: "A: I took Janet to the cinema last night.  A: I took Janet to the cinema last night.",
+        question: "A: I took Janet to the cinema last night. B: You _____ me too. I was at home.",
         answer:  "C. might have taken ",
         optionfs: [
             "A. might take  ",
@@ -1626,11 +1626,11 @@ let preinterstf = [
     {
         numb: 22,
         question: "Why did you take such a risk? You _____ died!",
-        answer: "C. comight have  ",
+        answer: "C. might have ",
         optionfs: [
             "A. could   ",
             "B. must be ",
-            "C. comight have  ",
+            "C. might have ",
             "D. may be"
         ]
     },
@@ -1728,11 +1728,11 @@ let preinteru = [
     {
         numb: 6,
         question: "He didn’t even apologize. This made her really angry. _______ he    didn’t even apologize made her really angry.",
-        answer:  "C. The fact that   ' ",
+        answer:  "C. The fact that",
         optionj: [
             "A. Why    ",
             "B. What   ",
-            "C. The fact that   ' ",
+            "C. The fact that",
             "D. The reason"
         ]
     },
@@ -1849,12 +1849,12 @@ let preinteru = [
     {
         numb: 17,
         question: "His eyes need _____.",
-        answer: "D. in",
+        answer: "D. testing",
         optionj: [
             "A. to have been tested ",
-            "B. with   ",
-            "C. from  ",
-            "D. in"
+            "B. be tested",
+            "C. to test ",
+            "D. testing"
         ]
     },
     {
@@ -2073,11 +2073,11 @@ let preintergh = [
     {
         numb: 12,
         question: " I’d __________ more than I do now if I __________ better grades at school.",
-        answer: "C. earn/get  ",
+        answer: "C. be earning/had got",
         optionqa: [
             "A. have earned/got ",
             "B. earn/get ",
-            "C. earn/get  ",
+            "C. be earning/had got",
             "D. earned/got"
         ]
     },
